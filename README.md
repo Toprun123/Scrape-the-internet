@@ -1,5 +1,5 @@
 # Html Scraping The Internet
----
+
 ### Table of contents
 * [General info](#general-info)
 * [How to include](#how-to-include)
@@ -13,7 +13,7 @@ This JavaScript & PHP based Project that helps people Scrape the internet.
 ### How to include
 Include it in your html file like this:-
 ```html
-<script src="lib_test.js" charset="utf-8"></script>
+<script src="funapi.eu5.org/lib_test.js" charset="utf-8"></script>
 ```
 
 ### How To Use
