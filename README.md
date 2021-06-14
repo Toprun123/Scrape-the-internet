@@ -30,6 +30,11 @@ contents_as_out.apply({out: 'id'}, 'https://pages.github.com/', 'div', 'slidesho
 ```
 
 <table>
+	<tr>
+		<td>Use</td>
+		<td>Code</td>
+		<td>Extra notes</td>
+	</tr>
     <tr>
         <td>Scrape element from any website using it's class(this will get only the first one that matches the class)</td>
 		<td><code>element_by_class.apply({out: id}, [Class_name, Addr, Tag, html_or_text]);</code></td>
