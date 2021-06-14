@@ -8,14 +8,19 @@
 ### General info
 This JavaScript & PHP based Project that helps people Scrape the internet.
 
+Visit my website [http://funapi.eu5.org/](http://funapi.eu5.org/)
 
 ## How to:-
 ### How to include
-Include it in your html file like this:-
+Include it in your html file like this..
 ```html
-<script src="funapi.eu5.org/lib_test.js" charset="utf-8"></script>
+<script src="https://funapi.eu5.org/lib_test.js" charset="utf-8"></script>
 ```
-
+.. or just download the lib.js file and use it as:-
+```html
+<script src="lib.js" charset="utf-8"></script>
+```
+---
 ### How To Use
 Use it as:-
 ```html
