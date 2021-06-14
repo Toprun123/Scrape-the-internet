@@ -2,14 +2,14 @@
 
 ### Table of contents
 * [General info](#general-info)
-* [How To](#how-to)
-* [Setup](#setup)
+* [How to include](#how-to-include)
+* [How To use](#how-to-use)
 
 ### General info
 This JavaScript & PHP based Project that helps people Scrape the internet.
 
 
-## How to
+## How to:-
 ### How to include
 Include it in your html file like this:-
 ```html
