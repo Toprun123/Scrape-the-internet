@@ -2,8 +2,8 @@
 
 [![license-MIT](https://img.shields.io/github/license/Toprun123/Scrape-the-internet?style=plastic)](https://github.com/Toprun123/Scrape-the-internet/)
 [![stars](https://img.shields.io/github/stars/Toprun123/Scrape-the-internet?style=plastic)](https://github.com/Toprun123/Scrape-the-internet/)
-[![version](https://img.shields.io/badge/version-1.0.0-orange?style=plastic)](https://github.com/Toprun123/Scrape-the-internet/)
-[![GitHub all releases](https://img.shields.io/github/downloads/Toprun123/Scrape-the-internet/total)](https://github.com/Toprun123/Scrape-the-internet/)
+[![version](https://img.shields.io/badge/version-1.0.0-orange?style=plastic)](https://github.com/Toprun123/Scrape-the-internet/releases/tag/v1.0)
+[![GitHub all releases](https://img.shields.io/github/downloads/Toprun123/Scrape-the-internet/total)](https://github.com/Toprun123/Scrape-the-internet/releases/tag/v1.0)
 
 ### Table of contents
 * [General info](#general-info)
