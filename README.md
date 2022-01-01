@@ -13,13 +13,11 @@
 ### General info
 This JavaScript & PHP based Project that helps people Scrape the internet.
 
-Visit my website [http://funapi.eu5.org/](http://funapi.eu5.org/)
-
 ## How to:-
 ### How to include
 Include it in your html file like this..
 ```html
-<script src="https://funapi.eu5.org/lib_test.js" charset="utf-8"></script>
+<script src="https://raw.githubusercontent.com/Toprun123/Scrape-the-internet/main/src/lib.js?token=ARACNZ5B4T4UKCT7DUBZSLTB2ASCA" charset="utf-8"></script>
 ```
 .. or just download the lib.js file and use it as:-
 ```html
