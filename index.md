@@ -1,37 +1,61 @@
-## Welcome to GitHub Pages
+# Html Scraping The Internet
 
-You can use the [editor on GitHub](https://github.com/Toprun123/Scrape-the-internet/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+[![license-MIT](https://img.shields.io/github/license/Toprun123/Scrape-the-internet?style=plastic)](https://github.com/Toprun123/Scrape-the-internet/)
+[![stars](https://img.shields.io/github/stars/Toprun123/Scrape-the-internet?style=plastic)](https://github.com/Toprun123/Scrape-the-internet/)
+[![version](https://img.shields.io/badge/version-1.0.0-orange?style=plastic)](https://github.com/Toprun123/Scrape-the-internet/releases/tag/v1.0)
+[![GitHub all releases](https://img.shields.io/github/downloads/Toprun123/Scrape-the-internet/total?style=plastic)](https://github.com/Toprun123/Scrape-the-internet/releases/tag/v1.0)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Table of contents
+* [General info](#general-info)
+* [How to include](#how-to-include)
+* [How To use](#how-to-use)
 
-### Markdown
+### General info
+This JavaScript & PHP based Project that helps people Scrape the internet.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+## How to:-
+### How to include
+Include it in your html file like this..
+```html
+<script src="https://raw.githubusercontent.com/Toprun123/Scrape-the-internet/main/src/lib.js?token=ARACNZ5B4T4UKCT7DUBZSLTB2ASCA" charset="utf-8"></script>
+```
+.. or just download the lib.js file and use it as:-
+```html
+<script src="lib.js" charset="utf-8"></script>
+```
+---
+### How To Use
+Use it as:-
+```html
+<script>
+// Instead of {out: 'id'} you can use your own div or p
+element_by_class.apply({out: 'id'}, ['mln4 mb24 sm:d-none svg-spot spotCookieLg', 'https://stackoverflow.com', 'svg',"html"]);
+// Or
+first_element_by_property.apply({out: 'id'}, ['mln4 mb24 sm:d-none svg-spot spotCookieLg', 'https://stackoverflow.com', 'svg',"html" , 'class']);
+// Or
+contents_as_out.apply({out: 'id'}, 'https://pages.github.com/', 'div', 'slideshow', 'html');
+</script>
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Toprun123/Scrape-the-internet/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+<table>
+	<tr>
+		<td>Use</td>
+		<td>Code</td>
+		<td>Extra notes</td>
+	</tr>
+    <tr>
+        <td>Scrape element from any website using it's class(this will get only the first one that matches the class)</td>
+		<td><code>element_by_class.apply({out: id}, [Class_name, Addr, Tag, html_or_text]);</code></td>
+		<td>Note you need to enter all of the classes! of the tag & check if it exists in the page source (Ctrl+U in windows)</td>
+    </tr>
+	<tr>
+        <td>This one is similar to the first one but in this one You can define the property</td>
+		<td><code>first_element_by_property.apply({out: id}, [Class_name, Addr, Tag, html_or_text, property]);</code></td>
+		<td>No extra notes 😊👍!!</td>
+    </tr>
+	<tr>
+        <td>Get element by id</td>
+		<td><code>contents_as_out.apply({out: id}, addr, tag, id, html_or_text);</code></td>
+		<td>Make sure the id exists!!</td>
+    </tr>
+</table>
