@@ -1,4 +1,3 @@
-<link rel="shortcut icon" href="http://funapi.eu5.org/favicon.ico" />
 <style>
     .error {
         color: #D8000C;
@@ -19,10 +18,10 @@
     $id = isset($_GET['id']) ? $_GET['id'] : FALSE;
     $addr_orig = isset($_GET['addr']) ? $_GET['addr'] : FALSE;
     $tt = isset($_GET['tt']) ? $_GET['tt'] : FALSE;
-    
-    $addr_in_process = str_replace("{","&",$addr_orig);
-    $addr = str_replace(" ","+",$addr_in_process);
-    
+
+    // $addr_in_process = str_replace('[amp$', '&', $addr_orig);
+    $addr = str_replace('[equ$', "=", str_replace('[amp$', '&', $addr_orig));
+
     $html = scrach_website($addr);
 
     if(($by=='true')&&($id==false)&&($tag==false)&&($tt==false)){
