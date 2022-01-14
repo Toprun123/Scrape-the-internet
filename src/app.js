@@ -1,15 +1,37 @@
+'use strict';
 // http://localhost/our_api.php?addr=https://stackoverflow.com&by=true
-requestDataByClassname({class : 'contrast more',
-                          address : 'https://ip.fish/'},
+// let he = new Scraper('https://stackoverflow.com/')
+/*
+requestDataByClassname({class : 'maincounter-number',
+                          address : 'https://www.worldometers.info/coronavirus/'},
                         scrapejs.HTML)
   .then(data => {
-    console.log(data[0].innerHTML);
+    console.log(data);
+    document.getElementById('id').innerHTML = data;
 });
+// */
 
-getPage('http://stackoverflow.com/')
+/*
+requestDataById({id : 'section-1',
+                  address : 'https://my.alhudaonline.org/course/view.php?id=155',
+                  src: 'src',
+                  loadScripts : true,
+                  loadStylesheets : true},
+                scrapejs.HTML)
   .then(data => {
     console.log(data);
+    document.getElementById('id').innerHTML = data.innerHTML;
 });
+// */
+
+
+//*
+getPage('https://duome.eu/aliza.d.grt')
+  .then(data => {
+    document.getElementById('id').innerHTML = data.documentElement.innerHTML;
+});
+//*/
+// console.log(he.getData());
 //contents_as_out.apply({out: 'id'}, ['https://pages.github.com/', 'div', 'slideshow', 'html']);
 
 // BUG: Returns "Undefined"

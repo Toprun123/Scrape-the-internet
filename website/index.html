@@ -128,9 +128,16 @@
                   <script src="./scrape.min.js" charset="utf-8"></script>
                   <button class="tton" style="background-color: #ad33fb; border: 5px; border-color: purple; font-size: 20px" onclick="deploy()">Run &gt;</button>
                   <p id="id" style="font-family: consolas; font-size: 25px;">Click the run button to see live preview!</p>
-                  <script> function deploy(){
-	element_by_class.apply({out: 'id'}, ['mln4 mb24 sm:d-none svg-spot spotCookieLg', 'https://stackoverflow.com', 'svg',"html"]);
-} </script>
+                  <script>
+                    function deploy() {
+                      requestDataByClassname({class : 'mln4 mb24 sm:d-none svg-spot spotCookieLg',
+                                                address : 'https://stackoverflow.com/'},
+                                              scrapejs.HTML)
+                        .then(data => {
+                          document.getElementById('id').innerHTML = data[0].outerHTML;
+                      });
+                    }
+                  </script>
                 </div>
               </div>
             </div>
