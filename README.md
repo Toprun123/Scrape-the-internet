@@ -23,17 +23,16 @@ Include it in your html file like this..
 ```html
 <script src="lib.js" charset="utf-8"></script>
 ```
+You can download the pakage from npm as
+```
+npm install scrapejs@latest
+```
 ---
 ### How To Use
 Use it as:-
 ```html
 <script>
-// Instead of {out: 'id'} you can use your own div or p
-element_by_class.apply({out: 'id'}, ['mln4 mb24 sm:d-none svg-spot spotCookieLg', 'https://stackoverflow.com', 'svg',"html"]);
-// Or
-first_element_by_property.apply({out: 'id'}, ['mln4 mb24 sm:d-none svg-spot spotCookieLg', 'https://stackoverflow.com', 'svg',"html" , 'class']);
-// Or
-contents_as_out.apply({out: 'id'}, 'https://pages.github.com/', 'div', 'slideshow', 'html');
+
 </script>
 ```
 

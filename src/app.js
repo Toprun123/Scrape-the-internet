@@ -1,33 +1,38 @@
 'use strict';
 // http://localhost/our_api.php?addr=https://stackoverflow.com&by=true
 // let he = new Scraper('https://stackoverflow.com/')
-/*
+//*
 requestDataByClassname({class : 'maincounter-number',
                           address : 'https://www.worldometers.info/coronavirus/'},
                         scrapejs.HTML)
   .then(data => {
+    // The returned value is a HTMLCollection.
+    // If the mode is scrapejs.TEXT it returns a javascript array.
     console.log(data);
     document.getElementById('id').innerHTML = data;
 });
 // */
 
-/*
-requestDataById({id : 'section-1',
-                  address : 'https://my.alhudaonline.org/course/view.php?id=155',
+//*
+requestDataById({id : 'ip',
+                  address : 'https://www.ip.fish/',
                   src: 'src',
-                  loadScripts : true,
-                  loadStylesheets : true},
-                scrapejs.HTML)
+                  loadScripts : false,
+                  loadStylesheets : false},
+                scrapejs.TEXT)
   .then(data => {
+    // data is your ip address as a string scraped from https://www.ip.fish/
+    // The returned value is a string as the mode is set as scrapejs.TEXT.
+    // If the mode is scrapejs.HTML the returned data is a HTML element.
     console.log(data);
     document.getElementById('id').innerHTML = data.innerHTML;
 });
 // */
-
-
 //*
-getPage('https://duome.eu/aliza.d.grt')
+getPage('https://duome.eu/toprun')
   .then(data => {
+    // Returns a document
+    console.log(data);
     document.getElementById('id').innerHTML = data.documentElement.innerHTML;
 });
 //*/
