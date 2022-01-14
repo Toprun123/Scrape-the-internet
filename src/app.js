@@ -1,7 +1,7 @@
 'use strict';
 // http://localhost/our_api.php?addr=https://stackoverflow.com&by=true
 // let he = new Scraper('https://stackoverflow.com/')
-//*
+/*
 requestDataByClassname({class : 'maincounter-number',
                           address : 'https://www.worldometers.info/coronavirus/'},
                         scrapejs.HTML)
@@ -9,11 +9,11 @@ requestDataByClassname({class : 'maincounter-number',
     // The returned value is a HTMLCollection.
     // If the mode is scrapejs.TEXT it returns a javascript array.
     console.log(data);
-    document.getElementById('id').innerHTML = data;
+    document.getElementById('id').innerHTML = data[0].outerHTML;
 });
 // */
 
-//*
+/*
 requestDataById({id : 'ip',
                   address : 'https://www.ip.fish/',
                   src: 'src',
@@ -28,12 +28,12 @@ requestDataById({id : 'ip',
     document.getElementById('id').innerHTML = data.innerHTML;
 });
 // */
-//*
+/*
 getPage('https://duome.eu/toprun')
   .then(data => {
     // Returns a document
     console.log(data);
-    document.getElementById('id').innerHTML = data.documentElement.innerHTML;
+    document.getElementById('id').innerHTML = data;
 });
 //*/
 // console.log(he.getData());
