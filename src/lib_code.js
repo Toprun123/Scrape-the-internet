@@ -56,9 +56,9 @@ if (navigator.onLine){
             let output = data.slice(hello+8+dict.class.length, data.length);
             let output_search_num = output.search(">");
             let final_out = output.slice(output_search_num+1, output.search("</"+dict.tag+">"));*/
-            html = parseHTML(data)
+            let html = parseHTML(data)
             /* console.log(html.documentElement.innerHTML); */
-            final_out = html.getElementById(dict.id)
+            let final_out = html.getElementById(dict.id)
             let text = '';
             if (dict.loadStylesheets) {
               var stylesheets = html.getElementsByTagName('style');

@@ -34,6 +34,7 @@ Use it as:-
 <p id="test1"></p>
 <p id="test2"></p>
 <p id="test3"></p>
+<script src="lib.min.js" charset="utf-8"></script>
 <script>
 requestDataByClassname({class : 'maincounter-number',
                           address : 'https://www.worldometers.info/coronavirus/'},
@@ -46,7 +47,6 @@ requestDataByClassname({class : 'maincounter-number',
 });
 requestDataById({id : 'ip',
                   address : 'https://www.ip.fish/',
-                  src: 'src',
                   loadScripts : false, /* Determines whether to load scripts or
                                           not if the value is true then all script
                                           elements of the webpage will be included
@@ -64,13 +64,14 @@ requestDataById({id : 'ip',
     // If loadScripts or loadStylesheets is enabled the the returned value
     // will be a div element.
     console.log(data);
-    document.getElementById('test2').innerHTML = data.innerHTML;
+    document.getElementById('test2').innerHTML = data;
 });
 getPage('https://duome.eu/toprun')
   .then(data => {
     // Returns a HTMLDocument
+    // My duolingo status from duome.eu
     console.log(data);
-    document.getElementById('id').innerHTML = data.documentElement.innerHTML;
+    document.getElementById('test3').innerHTML = data.documentElement.innerHTML;
 });
 </script>
 ```

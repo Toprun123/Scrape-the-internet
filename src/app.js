@@ -1,7 +1,7 @@
 'use strict';
 // http://localhost/our_api.php?addr=https://stackoverflow.com&by=true
 // let he = new Scraper('https://stackoverflow.com/')
-/*
+//*
 requestDataByClassname({class : 'maincounter-number',
                           address : 'https://www.worldometers.info/coronavirus/'},
                         scrapejs.HTML)
