@@ -1,5 +1,5 @@
 # Html Scraping The Internet
-Scrape the internet directly into your webpage in real time.
+Scrape the internet directly into your webpage in real time.<br>
 [![license-MIT](https://img.shields.io/github/license/Toprun123/Scrape-the-internet?style=plastic)](https://github.com/Toprun123/Scrape-the-internet/)
 [![stars](https://img.shields.io/github/stars/Toprun123/Scrape-the-internet?style=plastic)](https://github.com/Toprun123/Scrape-the-internet/)
 [![version](https://img.shields.io/badge/version-1.0.0-orange?style=plastic)](https://github.com/Toprun123/Scrape-the-internet/releases/tag/v1.0)
