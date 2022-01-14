@@ -31,30 +31,46 @@ npm install scrapejs@latest
 ### How To Use
 Use it as:-
 ```html
+<p id="test1"></p>
+<p id="test2"></p>
+<p id="test3"></p>
 <script>
-
+requestDataByClassname({class : 'maincounter-number',
+                          address : 'https://www.worldometers.info/coronavirus/'},
+                        scrapejs.HTML)
+  .then(data => {
+    // The returned value is a HTMLCollection.
+    // If the mode is scrapejs.TEXT it returns a javascript array.
+    console.log(data);
+    document.getElementById('test1').innerHTML = data[0].outerHTML; // Prints the current covid cases
+});
+requestDataById({id : 'ip',
+                  address : 'https://www.ip.fish/',
+                  src: 'src',
+                  loadScripts : false, /* Determines whether to load scripts or
+                                          not if the value is true then all script
+                                          elements of the webpage will be included
+                                          scripts with relative src attributes will
+                                          also be corrected. */
+                  loadStylesheets : false /* Determines whether to load the stylesheets
+                                             or not if the value is true then all style
+                                             elements of the webpage will be included. */
+                },
+                scrapejs.TEXT)
+  .then(data => {
+    // data is your ip address as a string scraped from https://www.ip.fish/
+    // The returned value is a string as the mode is set as scrapejs.TEXT.
+    // If the mode is scrapejs.HTML the returned data is a HTML element.
+    // If loadScripts or loadStylesheets is enabled the the returned value
+    // will be a div element.
+    console.log(data);
+    document.getElementById('test2').innerHTML = data.innerHTML;
+});
+getPage('https://duome.eu/toprun')
+  .then(data => {
+    // Returns a HTMLDocument
+    console.log(data);
+    document.getElementById('id').innerHTML = data.documentElement.innerHTML;
+});
 </script>
 ```
-
-<table>
-	<tr>
-		<td>Use</td>
-		<td>Code</td>
-		<td>Extra notes</td>
-	</tr>
-    <tr>
-        <td>Scrape element from any website using it's class(this will get only the first one that matches the class)</td>
-		<td><code>element_by_class.apply({out: id}, [Class_name, Addr, Tag, html_or_text]);</code></td>
-		<td>Note you need to enter all of the classes! of the tag & check if it exists in the page source (Ctrl+U in windows)</td>
-    </tr>
-	<tr>
-        <td>This one is similar to the first one but in this one You can define the property</td>
-		<td><code>first_element_by_property.apply({out: id}, [Class_name, Addr, Tag, html_or_text, property]);</code></td>
-		<td>No extra notes 😊👍!!</td>
-    </tr>
-	<tr>
-        <td>Get element by id</td>
-		<td><code>contents_as_out.apply({out: id}, addr, tag, id, html_or_text);</code></td>
-		<td>Make sure the id exists!!</td>
-    </tr>
-</table>
