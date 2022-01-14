@@ -30,7 +30,7 @@ if (navigator.onLine){
             let output = []
             if (mode == scrapejs.HTML) {} else if (mode == scrapejs.TEXT) {
               for (let i = 0; i < final_out.length; i++) {
-                output.push(final_out[i].innerTEXT);
+                output.push(final_out[i].innerText);
               }
               resolve(output);
             } else {
