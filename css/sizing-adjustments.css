@@ -1,0 +1,14 @@
+@charset "UTF-8";
+@media only screen and (max-width: 1480px) {
+    .btn-load {
+        display: none;
+    }
+    .btn-load-icon {
+        display: block;
+    }
+    .output-label {
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+    }
+}

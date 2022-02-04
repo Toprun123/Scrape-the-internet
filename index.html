@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!-- 252+64+110+43+139+64+50+113+482+12+88+15+84+162+25+29+520+30+3+85+49+194+45+34+307 = 2999lns -->
+<html lang="en" dir="ltr">
+    <head>
+        <link rel="icon" href="./images/favicon.ico">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ScrapeJs | Scrape the internet directly into your webpage in real time</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.26.0/components/prism-core.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.26.0/plugins/autoloader/prism-autoloader.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/master.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo_cont">
+                <img draggable="false" class="logo" src="./images/favicon.ico" alt="SCRAPEJS_Logo">
+            </div>
+            <div class="social_media">
+                <a href="https://github.com/Toprun123/scrapeJs" target="_blank">
+                    <picture class="logo">
+                        <source srcset="./images/github_dark.png" media="(prefers-color-scheme: dark)">
+                        <img draggable="false" class="logo" src="./images/github.png" alt="GITHUB">
+                    </picture>
+                </a>
+            </div>
+            <div class="phonly menu">
+                <span class="menu-line" id="line-1"></span>
+                <span class="menu-line" id="line-2"></span>
+                <span class="menu-line" id="line-3"></span>
+            </div>
+            <div class="search_container desktop-only">
+                <form class="search">
+                    <div class="search-box">
+                        <input autocomplete="off" type="text" name="search" class="search-input" placeholder="search">
+                        <button class="search-btn" type="submit">🔍</button>
+                    </div>
+                </form>
+            </div>
+            <div class="quick_links desktop-only">
+                <div id="home-link" style="float:left; width:85.72px;">
+                  <p class="link-cont">
+                    <a href="#" style="text-decoration: none; color: white;">Home<br></a>
+                    <span class="line line-home"></span>
+                  </p>
+                </div>
+                <div id="wiki-link" style="float:left; width:69.61px;">
+                  <p class="link-cont">
+                    <a href="/wiki.html" style="text-decoration: none; color: white;">Wiki<br></a>
+                    <span class="line line-wiki"></span>
+                  </p>
+                </div>
+                <div id="releases-link" style="float:right; width:126px;">
+                  <p class="link-cont">
+                    <a href="#" style="text-decoration: none; color: white;">Releases<br>
+                    </a>
+                    <span class="line line-releases"></span>
+                  </p>
+                </div>
+            </div>
+        </header>
+        <div class="banner desktop-only">
+            <div class="sub-block svg-container">
+                <!--div class="svg-sub">
+                    <svg version="1.1" class="layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 2000 2000" style="enable-background:new 0 0 2000 2000;" xml:space="preserve">
+                        <title>www-logo</title>
+                        <path class="st0" d="M1790.65,1150.71c2.82,358.69-327.09,651.86-736.87,654.83s-744.25-285.41-747.07-644.09"/>
+                        <path class="st1" d="M304.37,852.76c9.57-341.66,304.36-679.87,709.3-682.74c412.74-2.92,771.82,321.5,774.64,672.24"/>
+                        <path class="st2" d="M1935.82,995.11c0.62,82.58-73.3,150.6-166.95,155.67l-23.63-0.06l-166.2-0.47l-579.04-1.63l-443.32-1.26
+                            l-253.11-0.71c-89.59,0.67-162.71-64.57-163.32-145.72c-0.61-81.14,71.52-147.48,161.11-148.15l3.01-0.02l247.23-1.86l448.4-3.39
+                            l567.92-4.28l188.96-1.42c0.52,0,1.05-0.01,1.57-0.01C1855.9,841.8,1935.17,910.17,1935.82,995.11z"/>
+                        <polygon class="st2" points="1000,847.51 551.6,850.9 304.37,852.76 551.6,850.89 "/>
+                        <path class="st2" d="M1768.87,1150.78c-3.2,0.17-6.42,0.28-9.66,0.3c-4.7,0.04-9.36-0.09-13.97-0.36L1768.87,1150.78z"/>
+                        <line class="st2" x1="1790.64" y1="1150.84" x2="1768.87" y2="1150.78"/>
+                        <path class="st1" d="M386.52,552.84c350.27,125.08,755.12,104.18,1320.72,4.9"/>
+                        <path class="st3" d="M700.25,1717.37c0.99,0-66.25-143.34-111.69-361.94c-12.48-60.06-23.32-125.79-30.64-195.8
+                            c-0.43-4.08-0.84-8.17-1.24-12.27"/>
+                        <path class="st1" d="M551.6,851.01L551.6,851.01c4.69-69.1,14.18-140.07,29.83-211.93C610.39,506,660.44,369.87,740.11,236.98"/>
+                        <path class="st3" d="M1421.33,1717.37c58.51-110.46,98.56-222.15,124-332.24c18.2-78.79,28.93-156.77,33.58-232.88
+                            c0.05-0.7,0.09-1.41,0.13-2.11"/>
+                        <path class="st1" d="M1567.92,843.82c-11.17-82.15-28.46-159.6-49.34-230.56c-50.78-172.58-122.82-306.69-179.72-376.28"/>
+                        <path class="st3" d="M1000,1804.23c0,0,0-218.69,0-501.3c0-47.29,0-96.36,0-146.5c0-2.62,0-5.24,0-7.86"/>
+                        <path class="st1" d="M1000,847.83c0-51.02,0-101.7,0-151.32c0-215.84,0-411.43,0-526.27c0-0.08,0-0.16,0-0.24"/>
+                        <path class="st3" d="M386.52,1450.25c116.04-58.81,816.1-154.7,1320.72,4.5"/>
+                    </svg>
+                    <p class="www-text"> world wide web</p>
+                </div>
+                <div class="svg-sub">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="layer_1 less">
+                        <title>HTML5 Logo</title>
+                        <path fill="white" d="M108.4 0h23v22.8h21.2V0h23v69h-23V46h-21v23h-23.2M206 23h-20.3V0h63.7v23H229v46h-23M259.5 0h24.1l14.8 24.3L313.2 0h24.1v69h-23V34.8l-16.1 24.8l-16.1-24.8v34.2h-22.6M348.7 0h23v46.2h32.6V69h-55.6"/>
+                        <path fill="crimson" d="M107.6 471l-33-370.4h362.8l-33 370.2L255.7 512"/>
+                        <path fill="red" d="M256 480.5V131H404.3L376 447"/>
+                        <path fill="lightgrey" d="M142 176.3h114v45.4h-64.2l4.2 46.5h60v45.3H154.4M156.4 336.3H202l3.2 36.3 50.8 13.6v47.4l-93.2-26"/>
+                        <path fill="white" d="M369.6 176.3H255.8v45.4h109.6M361.3 268.2H255.8v45.4h56l-5.3 59-50.7 13.6v47.2l93-25.8"/>
+                    </svg>
+                </div-->
+            </div>
+            <div class="short-note"><div>Scrape the internet directly into your webpage in real time</div></div>
+        </div>
+        <div class="main">
+            <div class="block">
+                <a href="/downloads" class="block-title">Downloads</a>
+                <div class="vertical-align-center sub-block">
+                    <!--style="float: left;"-->
+                    <div class="releases-code"><pre id="code1" class="releases-pre code"><code class="code-code"><span class="token string">'use strict'</span><span class="token punctuation">;</span>
+<span class="token comment">// USING STRICT</span></code><div class="code-options desktop-only tooltip-up" data-display-text="copy"><?xml version="1.0" encoding="UTF-8"?><svg enable-background="new 0 0 503.607 503.607" version="1.1" viewBox="0 0 503.61 503.61" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>clipboard</title><defs><g id="cube" transform="translate(1 1)"><path fill="#ffffff" d="m385.1 57.754h-41.967v-8.393c0-9.233-7.554-16.787-16.787-16.787h-25.18v-8.394c0-14.269-10.911-25.18-25.18-25.18h-50.361c-14.269 0-25.18 11.751-25.18 25.18v8.393h-25.18c-9.233 0-16.787 7.554-16.787 16.787v8.393h-41.967c-23.502 0-41.967 18.466-41.967 41.967v360.92c0 23.502 18.466 41.967 41.967 41.967h268.59c23.502 0 41.967-18.466 41.967-41.967v-360.92c0-23.501-18.466-41.967-41.968-41.967zm-209.84-8.393h33.574c5.036 0 8.393-3.357 8.393-8.393v-16.788c0-5.036 3.357-8.393 8.393-8.393h50.361c5.036 0 8.393 4.197 8.393 8.393v16.787c0 5.036 3.357 8.393 8.393 8.393h33.574v58.754h-151.08v-58.753zm235.02 411.28c0 14.269-10.911 25.18-25.18 25.18h-268.59c-14.269 0-25.18-10.911-25.18-25.18v-360.92c0-14.269 10.911-25.18 25.18-25.18h41.967v33.574c0 9.233 7.554 16.787 16.787 16.787h151.08c9.233 0 16.787-7.554 16.787-16.787v-33.574h41.967c14.269 0 25.18 10.911 25.18 25.18v360.92z"/><path fill="#ffffff" d="m197.92 228.14c-3.357-3.357-8.393-4.197-11.751-0.839l-67.148 58.754c-1.679 1.679-2.518 4.197-2.518 6.715s0.839 5.036 2.518 6.715l67.148 58.754c1.679 0.839 4.197 1.679 5.875 1.679 2.518 0 5.036-0.839 5.875-3.357 3.357-3.357 2.518-8.393-0.839-11.751l-59.593-52.039 59.593-52.879c3.358-3.359 4.197-8.395 0.84-11.752z"/><path fill="#ffffff" d="m314.59 228.98c-3.357-3.357-8.393-2.518-11.751 0.839-3.357 3.357-2.518 8.393 0.839 11.751l59.593 52.039-59.593 52.039c-3.357 3.357-4.197 8.393-0.839 11.751 1.679 1.679 4.197 2.518 6.715 2.518 1.679 0 4.197-0.839 5.036 0l67.148-58.754c1.679-1.679 2.518-4.197 2.518-6.715s-0.839-5.036-2.518-6.715l-67.148-58.753z"/><path fill="#ffffff" d="m279.34 226.46c-4.197-1.679-9.233 0-10.911 4.197l-50.361 117.51c-1.679 4.197 0 9.233 4.197 10.911 0.839 0.839 2.518 0.839 3.357 0.839 3.357 0 6.715-1.679 7.554-5.036l50.361-117.51c1.678-4.196 0-9.232-4.197-10.911z"/></g></defs><use xlink:href="#cube"/></svg></div></pre></div>
+                    <div class="releases-code"><pre id="code2" class="releases-pre code"><code class="code-code"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>lib.js<span class="token punctuation">"</span></span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token comment">&lt;!-- Make sure 'lib.js' is in the same directory as this file --&gt;</span></code><div class="code-options desktop-only tooltip-up" data-display-text="copy"><?xml version="1.0" encoding="UTF-8"?><svg enable-background="new 0 0 503.607 503.607" version="1.1" viewBox="0 0 503.61 503.61" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>clipboard</title><defs><g id="cube" transform="translate(1 1)"><path fill="#ffffff" d="m385.1 57.754h-41.967v-8.393c0-9.233-7.554-16.787-16.787-16.787h-25.18v-8.394c0-14.269-10.911-25.18-25.18-25.18h-50.361c-14.269 0-25.18 11.751-25.18 25.18v8.393h-25.18c-9.233 0-16.787 7.554-16.787 16.787v8.393h-41.967c-23.502 0-41.967 18.466-41.967 41.967v360.92c0 23.502 18.466 41.967 41.967 41.967h268.59c23.502 0 41.967-18.466 41.967-41.967v-360.92c0-23.501-18.466-41.967-41.968-41.967zm-209.84-8.393h33.574c5.036 0 8.393-3.357 8.393-8.393v-16.788c0-5.036 3.357-8.393 8.393-8.393h50.361c5.036 0 8.393 4.197 8.393 8.393v16.787c0 5.036 3.357 8.393 8.393 8.393h33.574v58.754h-151.08v-58.753zm235.02 411.28c0 14.269-10.911 25.18-25.18 25.18h-268.59c-14.269 0-25.18-10.911-25.18-25.18v-360.92c0-14.269 10.911-25.18 25.18-25.18h41.967v33.574c0 9.233 7.554 16.787 16.787 16.787h151.08c9.233 0 16.787-7.554 16.787-16.787v-33.574h41.967c14.269 0 25.18 10.911 25.18 25.18v360.92z"/><path fill="#ffffff" d="m197.92 228.14c-3.357-3.357-8.393-4.197-11.751-0.839l-67.148 58.754c-1.679 1.679-2.518 4.197-2.518 6.715s0.839 5.036 2.518 6.715l67.148 58.754c1.679 0.839 4.197 1.679 5.875 1.679 2.518 0 5.036-0.839 5.875-3.357 3.357-3.357 2.518-8.393-0.839-11.751l-59.593-52.039 59.593-52.879c3.358-3.359 4.197-8.395 0.84-11.752z"/><path fill="#ffffff" d="m314.59 228.98c-3.357-3.357-8.393-2.518-11.751 0.839-3.357 3.357-2.518 8.393 0.839 11.751l59.593 52.039-59.593 52.039c-3.357 3.357-4.197 8.393-0.839 11.751 1.679 1.679 4.197 2.518 6.715 2.518 1.679 0 4.197-0.839 5.036 0l67.148-58.754c1.679-1.679 2.518-4.197 2.518-6.715s-0.839-5.036-2.518-6.715l-67.148-58.753z"/><path fill="#ffffff" d="m279.34 226.46c-4.197-1.679-9.233 0-10.911 4.197l-50.361 117.51c-1.679 4.197 0 9.233 4.197 10.911 0.839 0.839 2.518 0.839 3.357 0.839 3.357 0 6.715-1.679 7.554-5.036l50.361-117.51c1.678-4.196 0-9.232-4.197-10.911z"/></g></defs><use xlink:href="#cube"/></svg></div></pre></div>
+                    <div class="releases-code"><pre id="code3" class="releases-pre code"><code class="code-code"><span class="token string">'use strict'</span><span class="token punctuation">;</span>
+<span class="token comment">// USING STRICT</span></code><div class="code-options desktop-only tooltip-up" data-display-text="copy"><?xml version="1.0" encoding="UTF-8"?><svg enable-background="new 0 0 503.607 503.607" version="1.1" viewBox="0 0 503.61 503.61" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>clipboard</title><defs><g id="cube" transform="translate(1 1)"><path fill="#ffffff" d="m385.1 57.754h-41.967v-8.393c0-9.233-7.554-16.787-16.787-16.787h-25.18v-8.394c0-14.269-10.911-25.18-25.18-25.18h-50.361c-14.269 0-25.18 11.751-25.18 25.18v8.393h-25.18c-9.233 0-16.787 7.554-16.787 16.787v8.393h-41.967c-23.502 0-41.967 18.466-41.967 41.967v360.92c0 23.502 18.466 41.967 41.967 41.967h268.59c23.502 0 41.967-18.466 41.967-41.967v-360.92c0-23.501-18.466-41.967-41.968-41.967zm-209.84-8.393h33.574c5.036 0 8.393-3.357 8.393-8.393v-16.788c0-5.036 3.357-8.393 8.393-8.393h50.361c5.036 0 8.393 4.197 8.393 8.393v16.787c0 5.036 3.357 8.393 8.393 8.393h33.574v58.754h-151.08v-58.753zm235.02 411.28c0 14.269-10.911 25.18-25.18 25.18h-268.59c-14.269 0-25.18-10.911-25.18-25.18v-360.92c0-14.269 10.911-25.18 25.18-25.18h41.967v33.574c0 9.233 7.554 16.787 16.787 16.787h151.08c9.233 0 16.787-7.554 16.787-16.787v-33.574h41.967c14.269 0 25.18 10.911 25.18 25.18v360.92z"/><path fill="#ffffff" d="m197.92 228.14c-3.357-3.357-8.393-4.197-11.751-0.839l-67.148 58.754c-1.679 1.679-2.518 4.197-2.518 6.715s0.839 5.036 2.518 6.715l67.148 58.754c1.679 0.839 4.197 1.679 5.875 1.679 2.518 0 5.036-0.839 5.875-3.357 3.357-3.357 2.518-8.393-0.839-11.751l-59.593-52.039 59.593-52.879c3.358-3.359 4.197-8.395 0.84-11.752z"/><path fill="#ffffff" d="m314.59 228.98c-3.357-3.357-8.393-2.518-11.751 0.839-3.357 3.357-2.518 8.393 0.839 11.751l59.593 52.039-59.593 52.039c-3.357 3.357-4.197 8.393-0.839 11.751 1.679 1.679 4.197 2.518 6.715 2.518 1.679 0 4.197-0.839 5.036 0l67.148-58.754c1.679-1.679 2.518-4.197 2.518-6.715s-0.839-5.036-2.518-6.715l-67.148-58.753z"/><path fill="#ffffff" d="m279.34 226.46c-4.197-1.679-9.233 0-10.911 4.197l-50.361 117.51c-1.679 4.197 0 9.233 4.197 10.911 0.839 0.839 2.518 0.839 3.357 0.839 3.357 0 6.715-1.679 7.554-5.036l50.361-117.51c1.678-4.196 0-9.232-4.197-10.911z"/></g></defs><use xlink:href="#cube"/></svg></div></pre></div>
+                    <br>
+                </div>
+            </div>
+            <div class="block">
+                <p class="block-title">Why use <b>ScrapeJs</b>?</p>
+                <div class="sub-block center">
+                    <p class="exp">In order to fetch content from any webpage you can easily use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" target="_blank">fetch API</a> or <a href="https://api.jquery.com/jquery.ajax/" target="_blank">jquery's ajax</a> or <a href="https://stackoverflow.com/a/4033310/14313777" target="_blank">http requests</a>. Then why use <b>ScrapeJs</b>? The simple reason is unlike other alternatives, <b>ScrapeJs</b> can scrape content from almost any webpage - <span class="italic">even those that don't allow it</span> - this also works when the <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy" target="_blank">same-origin-policy</a> is enabled and the webpage does not allow scraping. <b>ScrapeJs</b> also allows <a href="https://www.geeksforgeeks.org/synchronous-and-asynchronous-in-javascript/" target="_blank">synchronous</a> scraping in js which is not supported by some of these alternatives. The process is quite simple - No JavaScript library can bypass the <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy" target="_blank">same-origin-policy</a> - Then how does <b>ScrapeJs</b>? We use <a href="https://www.php.net/" target="_blank">PHP</a> instead! A few lines of PHP code along with JavaScript - <span class="italic">to make it available to you</span> - has helped me build this library without getting checked <span class="italic">or worse blocked</span> by the same-origin-policy.</p>
+                </div>
+            </div>
+            <div class="block">
+                <a href="/fiddle" class="block-title">Fiddle</a>
+                <div class="sub-block">
+                    <div class="demo-code-cont">
+<pre class="demo-code code" tabindex="0"><code class="code-code"><span class="token function">requestDataByClassname</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token keyword">class</span> <span class="token operator">:</span> <span class="token string">'<input autocomplete="off" class="code-edit code-edit-input-class-1" type="text" value="maincounter-number" placeholder="enter className of requested element" id="class-ipt">'</span><span class="token punctuation">,</span>
+                         <span class="token literal-property property">address</span> <span class="token operator">:</span> <span class="token string">'<input id="address-ipt" autocomplete="off" class="code-edit code-edit-input-address-1" type="text" value="https://www.worldometers.info/coronavirus/" placeholder="enter address of webpage">'</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+                       scrapejs<span class="token punctuation">.</span><select class="select-demo" name="mode" id="mode-ipt"><option value="HTML">HTML</option><option value="TEXT">TEXT</option></select><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">data</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token comment">// The returned value is a HTMLCollection.</span>
+        <span class="token comment">// If the mode is scrapejs.TEXT it returns a javascript array.</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'test'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> data<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>outerHTML<span class="token punctuation">;</span> <span class="token comment">// Prints the current covid cases</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code><div class="code-options desktop-only tooltip-up run-test" data-display-text="run"><img src="./images/run.png" alt="run code" class="run"></div><div class="code-options-2 desktop-only tooltip-down" data-display-text="copy"><?xml version="1.0" encoding="UTF-8"?><svg enable-background="new 0 0 503.607 503.607" version="1.1" viewBox="0 0 503.61 503.61" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>clipboard</title><defs><g id="cube" transform="translate(1 1)"><path fill="#ffffff" d="m385.1 57.754h-41.967v-8.393c0-9.233-7.554-16.787-16.787-16.787h-25.18v-8.394c0-14.269-10.911-25.18-25.18-25.18h-50.361c-14.269 0-25.18 11.751-25.18 25.18v8.393h-25.18c-9.233 0-16.787 7.554-16.787 16.787v8.393h-41.967c-23.502 0-41.967 18.466-41.967 41.967v360.92c0 23.502 18.466 41.967 41.967 41.967h268.59c23.502 0 41.967-18.466 41.967-41.967v-360.92c0-23.501-18.466-41.967-41.968-41.967zm-209.84-8.393h33.574c5.036 0 8.393-3.357 8.393-8.393v-16.788c0-5.036 3.357-8.393 8.393-8.393h50.361c5.036 0 8.393 4.197 8.393 8.393v16.787c0 5.036 3.357 8.393 8.393 8.393h33.574v58.754h-151.08v-58.753zm235.02 411.28c0 14.269-10.911 25.18-25.18 25.18h-268.59c-14.269 0-25.18-10.911-25.18-25.18v-360.92c0-14.269 10.911-25.18 25.18-25.18h41.967v33.574c0 9.233 7.554 16.787 16.787 16.787h151.08c9.233 0 16.787-7.554 16.787-16.787v-33.574h41.967c14.269 0 25.18 10.911 25.18 25.18v360.92z"/><path fill="#ffffff" d="m197.92 228.14c-3.357-3.357-8.393-4.197-11.751-0.839l-67.148 58.754c-1.679 1.679-2.518 4.197-2.518 6.715s0.839 5.036 2.518 6.715l67.148 58.754c1.679 0.839 4.197 1.679 5.875 1.679 2.518 0 5.036-0.839 5.875-3.357 3.357-3.357 2.518-8.393-0.839-11.751l-59.593-52.039 59.593-52.879c3.358-3.359 4.197-8.395 0.84-11.752z"/><path fill="#ffffff" d="m314.59 228.98c-3.357-3.357-8.393-2.518-11.751 0.839-3.357 3.357-2.518 8.393 0.839 11.751l59.593 52.039-59.593 52.039c-3.357 3.357-4.197 8.393-0.839 11.751 1.679 1.679 4.197 2.518 6.715 2.518 1.679 0 4.197-0.839 5.036 0l67.148-58.754c1.679-1.679 2.518-4.197 2.518-6.715s-0.839-5.036-2.518-6.715l-67.148-58.753z"/><path fill="#ffffff" d="m279.34 226.46c-4.197-1.679-9.233 0-10.911 4.197l-50.361 117.51c-1.679 4.197 0 9.233 4.197 10.911 0.839 0.839 2.518 0.839 3.357 0.839 3.357 0 6.715-1.679 7.554-5.036l50.361-117.51c1.678-4.196 0-9.232-4.197-10.911z"/></g></defs><use xlink:href="#cube"/></svg></div></pre></div>
+                    <div class="output-demo-1">
+                        <p class="output-label">
+                            <button class="btn btn-warning btn-load" onclick="window.frames[0].location.reload()">Reload</button>
+                            <abbr title="Reload output"><button class="btn btn-warning btn-load-icon" onclick="window.frames[0].location.reload()">&#11118;</button></abbr>
+                            <br style="display: block; margin: 10px 0; content: ' ';"/>
+                            <button class="btn btn-danger btn-load">Clear console</button>
+                            <abbr title="Clear console"><button class="btn btn-danger btn-load-icon">&#9587;</button></abbr>
+                            <br class="phonly" style="display: block; margin: 10px 0; content: ' ';"/>
+                            <abbr title="Run"><button class="btn btn-primary btn-load-icon phonly">&gt;</button></abbr>
+                        </p>
+                        <div class="demo-frame">
+                            <iframe name="frame1" id="frame1" class="frames"></iframe>
+                            <div class="console"><div id="console-1"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block">
+                <p href="#" class="block-title">Some samples</p>
+                <div class="sub-block">
+                    <div class="sample" style="background-color: rgb(239, 186, 51);">
+                        <div class="fetched-content" id="content-1"></div>
+                        <p>Your IP Address</p>
+                        <details><summary>Source</summary>Address: <a href="https://www.ip.fish/" target="_blank">http://www.ip.fish/</a></details>
+                    </div>
+                    <div class="sample" style="background-color: rgb(190,211,229);">
+                        <div class="fetched-content" id="content-2"></div>
+                        <p>Stackoverflow cookie icon</p>
+                        <details><summary>Source</summary>Address: <a href="https://www.idk.com/" target="_blank">http://www.idk.com/</a></details>
+                    </div>
+                    <div class="sample" style="background-color: rgb(21,131,109);">
+                        <div class="fetched-content" id="content-3"></div>
+                        <p></p>
+                        <details><summary>Source</summary>Address: <a href="https://www.idk.com/" target="_blank">http://www.idk.com/</a></details>
+                    </div>
+                    <div class="sample" style="background-color: rgb(167,148,245);">
+                        <div class="fetched-content" id="content-4"></div>
+                        <p></p>
+                        <details><summary>Source</summary>Address: <a href="https://www.idk.com/" target="_blank">http://www.idk.com/</a></details>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="social_media">
+                <a href="https://github.com/Toprun123/scrapeJs" target="_blank">
+                    <picture class="logo">
+                        <source srcset="./images/github.png" media="(prefers-color-scheme: dark)">
+                        <img draggable="false" class="logo" src="./images/github_dark.png" alt="GITHUB">
+                    </picture>
+                </a>
+            </div>
+        </footer>
+        <script type="text/javascript" src="./scripts/master.js"></script>
+    </body>
+</html>

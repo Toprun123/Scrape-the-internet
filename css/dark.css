@@ -1,0 +1,109 @@
+@charset "UTF-8";
+@media (prefers-color-scheme: dark) {
+    .menu-line {
+        background-color: #20163a;
+    }
+    body {
+        background-color: rgb(48, 48, 48);
+        color: #fff;
+    }
+    .block {
+        border-bottom: 1px solid #5a5a5a;
+    }
+    .code {
+        background-color: #1b1b1b !important;
+    }
+    a:link {
+        color: #80c3ff;
+        text-decoration: none;
+    }
+    a:visited {
+        color: #80c3ff;
+        text-decoration: none;
+    }
+    a:hover {
+        color: #7e7cff;
+        text-decoration: underline;
+    }
+    a:active {
+        color: #7e7cff;
+        text-decoration: underline;
+    }
+    header {
+        background-color: #6a5399;
+    }
+    .line {
+        background-color: #342755;
+    }
+    .select-demo {
+        background-color: #161616;
+    }
+    .demo-frame {
+        background-color: #dcab4f;
+        color: black;
+        border-color: white;
+    }
+    .frames {
+        background-color: #dcab4f;
+        color: black;
+        border-color: white;
+    }
+    .banner {
+        background-color: #20163a;
+        color: whitesmoke;
+    }
+    .st0 {
+        fill: none;
+        stroke: whitesmoke;
+        stroke-width: 42.0621;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+    }
+    .st1 {
+        fill: none;
+        stroke: whitesmoke;
+        stroke-width: 41.7435;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+    }
+    .st2 {
+        fill: none;
+        stroke: whitesmoke;
+        stroke-width: 43.0883;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+    }
+    .st3 {
+        fill: none;
+        stroke: whitesmoke;
+        stroke-width: 42.2138;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+    }
+    .search-input {
+        background-color: #423072;
+        color: white;
+    }
+    .search-input::-webkit-input-placeholder {
+        color: #8c70d4;
+    }
+    .search-input::-moz-placeholder {
+        color: #8c70d4;
+    }
+    .search-input:-ms-input-placeholder {
+        color: #8c70d4;
+    }
+    .search-input::-ms-input-placeholder {
+        color: #8c70d4;
+    }
+    .search-input::placeholder {
+        color: #8c70d4;
+    }
+    .search-input:focus {
+        color: black;
+        background-color: white;
+    }
+    .search-btn {
+        background-color: #4a3975;
+    }
+}

@@ -1,0 +1,34 @@
+var colors = [
+    "rgb(235,242,133)",
+    "rgb(235,242,133)",
+    "rgb(194,178,218)",
+    "rgb(239,186,51)",
+    "rgb(231,207,192)",
+    "rgb(176,194,123)",
+    "rgb(201,207,190)",
+    "rgb(29,130,113)",
+    "rgb(196,188,210)",
+    "rgb(21,131,109)",
+    "rgb(190,211,229)",
+    "rgb(167,148,245)",
+];
+var samples = document.getElementsByClassName('sample');
+var colors_used = [];
+for (let i = 0; i < samples.length; i++) {
+    var random_color = Math.floor(Math.random() * colors.length);
+    for (let j = 0; j < colors_used.length; j++) {
+        const color = colors_used[j];
+        if (random_color == color) {
+            i--;
+            break;
+        }
+    }
+    colors_used.push(random_color);
+    const sample = samples[i];
+    console.log(colors[random_color] + ' : ' + sample.innerHTML)
+    sample.style.backgroundColor = colors[random_color];
+    sample.style.color = colors[random_color];
+}
+/*var frame = window.frames[0].document;
+            frame.write('');
+            frame.close();*/

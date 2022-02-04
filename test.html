@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<p id="test1"></p>
+<script src="http://localhost/scripts/scrape.min.js" charset="utf-8"></script>
+<script>
+    var hello = requestDataByClassnameSync({class : 'maincounter-number', address : 'https://www.worldometers.info/coronavirus/'}, scrapejs.HTML);
+    console.log(hello[2].innerHTML);
+    var hello2 = requestDataByIdSync({id : 'ip',
+                    address : 'https://www.ip.fish/',
+                    loadScripts : false, /* Determines whether to load scripts or
+                                            not if the value is true then all script
+                                            elements of the webpage will be included
+                                            scripts with relative src attributes will
+                                            also be corrected. */
+                    loadStylesheets : false /* Determines whether to load the stylesheets
+                                                or not if the value is true then all style
+                                                elements of the webpage will be included. */
+                    },
+                    scrapejs.TEXT);
+    console.log(hello2)
+    requestDataById({id : 'ip',
+                  address : 'https://www.ip.fish/',
+                  loadScripts : false, /* Determines whether to load scripts or
+                                          not if the value is true then all script
+                                          elements of the webpage will be included
+                                          scripts with relative src attributes will
+                                          also be corrected. */
+                  loadStylesheets : false /* Determines whether to load the stylesheets
+                                             or not if the value is true then all style
+                                             elements of the webpage will be included. */
+                },
+                scrapejs.HTML)
+  .then(data => {
+    // data is your ip address as a string scraped from https://www.ip.fish/
+    // The returned value is a string as the mode is set as scrapejs.TEXT.
+    // If the mode is scrapejs.HTML the returned data is a HTML element.
+    // If loadScripts or loadStylesheets is enabled the the returned value
+    // will be a div element.
+    console.log(data);
+    document.getElementById('test1').innerHTML = data;
+});
+    getData('http://localhost/scripts/scrape.min.js').then(data => {
+        console.log(data);
+    });
+</script>

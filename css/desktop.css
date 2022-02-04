@@ -1,0 +1,42 @@
+@charset "UTF-8";
+@media only screen and (min-width: 800px) {
+    .sample {
+        margin: 7px 10px 7px;
+    }
+    .releases-code {
+        width: calc(23% - 10px);
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        float: left;
+        -webkit-transition: 0.4s;
+        -o-transition: 0.4s;
+        transition: 0.4s;
+        -webkit-transform: translate3d(0,0,0);
+                transform: translate3d(0,0,0);
+        overflow: visible;
+    }
+    .releases-pre {
+        overflow-x: scroll !important;
+        position: relative !important;
+    }
+    .vertical-align-center {
+        text-align: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+    .vertical-align-center:hover > * {
+        width: calc(19% - 10px);
+        opacity: 0.4;
+    }
+    .vertical-align-center:hover > *:hover {
+        width: calc(31% - 10px);
+        opacity: 1;
+    }
+    .phonly {
+        display: none;
+    }
+    .desktop-only {
+        display: block;
+    }
+}

@@ -1,0 +1,138 @@
+@charset "UTF-8";
+.example {
+    display: -ms-grid;
+    display: grid;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background: -o-linear-gradient(top, white, black);
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+    background: linear-gradient(to bottom, white, black);
+}
+.main-bg {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.box {
+    display: block;
+    padding: 20px;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 75vh;
+    height: auto;
+    width: 75vw;
+    border-radius: 15px;
+    margin-top: calc(12.5vh - 21.5px);
+    margin-bottom: calc(12.5vh - 31.5px);
+    text-align: center;
+}
+.err-code {
+    font-weight: bold;
+    font-family: 'ubuntu-mono';
+    width: 75vw;
+    font-size: calc(230px);
+    line-height: 1em;
+    position: relative;
+}
+.err-code:after {
+    position: absolute;
+    content: attr(data-text);
+    top: 0;
+    left: 0;
+    right: 0;
+    background: -webkit-repeating-linear-gradient(-45deg, #71b7e6, #69a6ce, #b98acc, #ee8176, #b98acc, #69a6ce, #9b59b6);
+    background: -o-repeating-linear-gradient(135deg, #71b7e6, #69a6ce, #b98acc, #ee8176, #b98acc, #69a6ce, #9b59b6);
+    background: repeating-linear-gradient(-45deg, #71b7e6, #69a6ce, #b98acc, #ee8176, #b98acc, #69a6ce, #9b59b6);
+    background-size: 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.25);
+    -webkit-animation: animate 5s ease-in-out infinite;
+        animation: animate 5s ease-in-out infinite;
+}
+.sub-text {
+    font-size: 3vw;
+}
+.hg {
+    padding: 0.5em 0;
+    margin: auto;
+}
+.links {
+    margin: 0 5px 0;
+    border-radius: 25px;
+    width: 120px;
+    height: 50px;
+    border: 0;
+    background-color: #a88ce2;
+    border: 2px solid #a88ce2;
+    -webkit-transition: 0.35s;
+    -o-transition: 0.35s;
+    transition: 0.35s;
+}
+.links:hover {
+    background-color: transparent;
+    color: #a88ce2;
+    border: 2px solid #a88ce2;
+}
+@media (prefers-color-scheme: dark) {
+    .box {
+        background-color: #48444c;
+    }
+    .links {
+        color: #48444c;
+    }
+}
+@media (prefers-color-scheme: light) {
+    .box {
+        -webkit-box-shadow: 0px 0px 25px 10px #e7e7e7;
+                box-shadow: 0px 0px 25px 10px #e7e7e7;
+        background-color: #fff;
+    }
+    .links {
+        color: #fff;
+    }
+    .main {
+        background-color: #d0d0d0;
+    }
+}
+@-webkit-keyframes animate {
+    0%{
+      background-position: 0 0;
+    }
+    25%{
+      background-position: 100% 0;
+    }
+    50%{
+      background-position: 100% 100%;
+    }
+    75%{
+      background-position: 0% 100%;
+    }
+    100%{
+      background-position: 0% 0%;
+    }
+}
+@keyframes animate {
+    0%{
+      background-position: 0 0;
+    }
+    25%{
+      background-position: 100% 0;
+    }
+    50%{
+      background-position: 100% 100%;
+    }
+    75%{
+      background-position: 0% 100%;
+    }
+    100%{
+      background-position: 0% 0%;
+    }
+}

@@ -1,18 +1,5 @@
-<style>
-    .error {
-        color: #D8000C;
-        background-color: #FFD2D2;
-        font-size:25px;
-    }
-    .error i {
-        margin:10px 22px;
-        font-size:2em;
-        vertical-align:middle;
-    }
-</style>
 <?php
-    include("http://funapi.eu5.org/scracher.php");
-
+    include("scraper.php");
     $tag = isset($_GET['tag']) ? $_GET['tag'] : FALSE;
     $by = isset($_GET['by']) ? $_GET['by'] : FALSE;
     $id = isset($_GET['id']) ? $_GET['id'] : FALSE;
@@ -47,8 +34,8 @@
 	    }
 
 	    if(!$error){
-	        $orignal = $html->find($tag."#".$id,0)->$tt_f;
-	        echo $orignal;
+	        $original = $html->find($tag."#".$id,0)->$tt_f;
+	        echo $original;
 	    }
 
 	    if($error){

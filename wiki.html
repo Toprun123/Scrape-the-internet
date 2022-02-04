@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <link rel="icon" href="./images/favicon.ico">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ScrapeJs | Wiki</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="./highlightjs/styles/atom-one-dark.min.css" media="(prefers-color-scheme: dark)">
+        <link rel="stylesheet" href="./highlightjs/styles/atom-one-light.min.css" media="(prefers-color-scheme: light)">
+        <script src="./highlightjs/highlight.min.js"></script>
+        <script type="text/javascript">
+            hljs.highlightAll();
+        </script>
+        <link rel="stylesheet" href="./css/master.css">
+        <link rel="stylesheet" href="./css/wiki.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo_cont">
+                <img draggable="false" class="logo" src="./images/favicon.ico" alt="SCRAPEJS_Logo">
+            </div>
+            <div class="social_media">
+                <a href="https://github.com/Toprun123/scrapeJs" target="_blank">
+                    <picture class="logo">
+                        <source srcset="./images/github_dark.png" media="(prefers-color-scheme: dark)">
+                        <img draggable="false" class="logo" src="./images/github.png" alt="GITHUB">
+                    </picture>
+                </a>
+            </div>
+            <div class="phonly menu">
+                <span class="menu-line" id="line-1"></span>
+                <span class="menu-line" id="line-2"></span>
+                <span class="menu-line" id="line-3"></span>
+            </div>
+            <div class="search_container desktop-only">
+                <form class="search">
+                    <div class="search-box">
+                        <input autocomplete="off" type="text" name="search" class="search-input" placeholder="search">
+                        <button class="search-btn" type="submit">🔍</button>
+                    </div>
+                </form>
+            </div>
+            <div class="quick_links desktop-only">
+                <div id="home-link" style="float:left; width:85.72px;">
+                  <p class="link-cont">
+                    <a href="#" style="text-decoration: none; color: white;">Home<br></a>
+                    <span class="line line-home"></span>
+                  </p>
+                </div>
+                <div id="wiki-link" style="float:left; width:69.61px;">
+                  <p class="link-cont">
+                    <a href="/wiki.html" style="text-decoration: none; color: white;">Wiki<br></a>
+                    <span class="line line-wiki"></span>
+                  </p>
+                </div>
+                <div id="releases-link" style="float:right; width:126px;">
+                  <p class="link-cont">
+                    <a href="#" style="text-decoration: none; color: white;">Releases<br>
+                    </a>
+                    <span class="line line-releases"></span>
+                  </p>
+                </div>
+            </div>
+        </header>
+        <nav class="nav-bar">
+            <div class="logo-nav" onclick="window.location.href = 'https://localhost/';">
+                <img draggable="false" class="logo-nav" src="./images/favicon.ico" alt="SCRAPEJS_Logo">ScrapeJs
+            </div>
+            <ul class="nav-ul">
+                <li class="wiki nav-li nav-fast" onclick="goto(this)">Wiki</li>
+                <li class="quickStart nav-li nav-fast" onclick="goto(this)">Quick Start</li>
+                <li class="releases nav-li nav-fast" onclick="goto(this)">Releases</li>
+                <li class="nav-li">
+                    <span class="functions topic" onclick="goto(this)"> Functions </span>
+                    <ol class="nav-ol">
+                        <li class="requestDataByClassname nav-li" onclick="goto(this)"><span class="token function">requestDataByClassname</span></li>
+                        <li class="requestDataById nav-li" onclick="goto(this)"><span class="token function">requestDataById</span></li>
+                        <li class="getPage nav-li" onclick="goto(this)"><span class="token function">getPage</span></li>
+                        <li class="getData nav-li" onclick="goto(this)"><span class="token function">getData</span></li>
+                        <li class="requestDataByClassnameSync nav-li" onclick="goto(this)"><span class="token function">requestDataByClassnameSync</span></li>
+                        <li class="requestDataByIdSync nav-li" onclick="goto(this)"><span class="token function">requestDataByIdSync</span></li>
+                        <li class="getPageSync nav-li" onclick="goto(this)"><span class="token function">getPageSync</span></li>
+                        <li class="getDataSync nav-li" onclick="goto(this)"><span class="token function">getDataSync</span></li>
+                    </ol>
+                </li>
+                <li class="nav-li">
+                    <span class="constants topic" onclick="goto(this)"> Constants </span>
+                    <ol class="nav-ol">
+                        <li class="scrapejsHTML nav-li" onclick="goto(this)"><span class="token keyword">scrapejs</span>.<span class="token literal-property property">HTML</span></li>
+                        <li class="scrapejsTEXT nav-li" onclick="goto(this)"><span class="token keyword">scrapejs</span>.<span class="token literal-property property">TEXT</span></li>
+                    </ol>
+                </li>
+            </ul>
+        </nav>
+        <div class="main">
+            <block id="quickStart">
+                <span class="block-title">Quick Start</span><br>
+                For a simple Quick Start just add this in you HTML page's head tag before you use the functions -
+                <pre><code>&lt;script src="http://localhost/scrape.min.js" charset="utf-8">&lt;/script></code></pre>
+                And use it as -
+                <pre><code class="hljs language-javascript">requestDataByClassname({class : 'maincounter-number',
+                          address : 'https://www.worldometers.info/coronavirus/'},
+                        scrapejs.TEXT)
+  .then(data =&gt; {
+    // The returned value is a JavaScript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>.
+    console.log(data);
+    document.getElementById('output').innerHTML = data[0]; // Prints the current covid cases
+});</code></pre>
+                this makes an Asynchronous request to <a href="https://www.worldometers.info/coronavirus" target="_blank">https://www.worldometers.info/coronavirus</a> and retrieves
+                the <code class="hljs language-javascript">innerText</code> of the elements on the page that use the class <code class="hljs language-javascript">maincounter-number</code>
+                (hence: retrieving the coronavirus data in realtime)<br>
+                Asynchronous requests are useful as they resolve or break without blocking the main thread and making the page unresponsive for the user, but this data cannot be used outside
+                of <code class="hljs language-javascript">.then(data => {})</code> and might make it a bit difficult to use if your page requires the data some where else in the page
+                for this problem you can easily make a synchronous request by suffixing the function with the keyword <code class="hljs language-javascript">Sync</code>, for example -
+                <pre><code>var data = requestDataByIdSync({id : 'ip',
+                address : 'https://www.ip.fish/'},
+                scrapejs.HTML);
+console.log(data.innerHTML);</code></pre>
+                Here the function makes a Synchronous request to <a href="https://ip.fish/">https://ip.fish/</a> and retrieves your ip address from the Element with the id <code class="hljs language-js">ip</code>
+                this request keeps the page loading untill the data is retrieved but the data can be used anywhere in the code after the request is successful.<br>
+                <span class="note">Please read full documentation for understanding all inputs and concepts</span>
+            </block>
+            <block id="releases">
+                <span class="block-title">Releases</span><br>
+                There are multiple ways to use the ScrapeJs library, the quickest way is to use our cdn and load it into your html page like this -<br>
+                <pre><code>&lt;script src="http://localhost/scrape.js" charset="utf-8">&lt;/script></code></pre>
+                Or alternatively download the file from <a href="http://localhost/scrape.js">here</a> and use it as -<br>
+                <pre><code>&lt;script src="./scrape.js" charset="utf-8">&lt;/script></code></pre>
+                For faster loading you are recomended to use the minified version -
+                <pre><code>&lt;script src="http://localhost/scrape.min.js" charset="utf-8">&lt;/script></code></pre>
+                download from <a href="http://localhost/scrape.min.js">here</a> and use it as -<br>
+                <pre><code>&lt;script src="./scrape.min.js" charset="utf-8">&lt;/script></code></pre>
+                <span class="block-title">Older releases</span><br>
+                <h3><a href="http://localhost/1.0.0/scrape.min.js">1.0.0</a></h3>
+                This version contains only Asynchronous functions from the library.<br>
+                It also does not include the function <code class="hljs language-javascript">getData();</code>.<br>
+                <span class="note">This file loads faster as it is shorter.</span>
+                <pre><code>&lt;script src="http://localhost/1.0.0/scrape.js" charset="utf-8">&lt;/script></code></pre>
+                <pre><code class="language-bash">npm install -g scrapejs@1.0.0</code></pre>
+                <span class="note">This file loads faster as it is shorter and minified.</span>
+                <pre><code>&lt;script src="http://localhost/1.0.0/scrape.min.js" charset="utf-8">&lt;/script></code></pre>
+            </block>
+            <block id="functions">
+                The library <b>ScrapeJs</b> contains eight <a target="_blank" href="https://www.w3schools.com/js/js_functions.asp">functions</a> namely -
+                <ul class="functions-list">
+                    <li>
+                        <code class="hljs language-javascript">requestDataByClassname();</code> ruturns a js <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promise</a> which resolves-
+                        <ol>
+                            <li>
+                                A <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection"><code class="hljs language-javascript">HTMLCollection</code></a> if mode is <code class="hljs language-javascript">scrapejs.HTML</code>
+                            </li>
+                            <li>
+                                A js <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code class="hljs language-javascript">Array</code></a> if mode is <code class="hljs language-javascript">scrapejs.TEXT</code>
+                            </li>
+                        </ol>
+                        Read more about the function <a target="_blank" href="#requestDataByClassname">here</a>
+                    </li>
+                    <li>
+                        <code class="hljs language-javascript">requestDataById();</code> returns a js <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promise</a> which resolves-
+                        <ol>
+                            <li>
+                                A <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement"><code class="hljs language-javascript">HTML[element-type]Element</code></a> (eg: <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSpanElement"><code class="hljs language-javascript">HTMLSpanElement</code></a>) if mode is <code class="hljs language-javascript">scrapejs.HTML</code>
+                            </li>
+                            <li>
+                                A js <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code class="hljs language-javascript">String</code></a> if mode is <code class="hljs language-javascript">scrapejs.TEXT</code>
+                            </li>
+                        </ol>
+                        Read more about the function <a target="_blank" href="#requestDataById">here</a>
+                    </li>
+                    <li>
+                        <code class="hljs language-javascript">getPage();</code> returns a js <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promise</a> which resolves-
+                        <ol>
+                            <li>
+                                A <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDocument"><code class="hljs language-javascript">HTMLDocument</code></a> - The HTML code of the page requested
+                            </li>
+                        </ol>
+                        Read more about the function <a target="_blank" href="#getPage">here</a>
+                    </li>
+                    <li>
+                        <code class="hljs language-javascript">getData();</code> returns a js <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promise</a> which resolves-
+                        <ol>
+                            <li>
+                                A js <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code class="hljs language-javascript">String</code></a> - The contents of the page requested - can be other than html
+                            </li>
+                        </ol>
+                        Read more about the function <a target="_blank" href="#getData">here</a>
+                    </li>
+                    <li>
+                        <code class="hljs language-javascript">requestDataByClassnameSync();</code> returns -
+                        <ol>
+                            <li>
+                                A <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection"><code class="hljs language-javascript">HTMLCollection</code></a> if mode is <code class="hljs language-javascript">scrapejs.HTML</code>
+                            </li>
+                            <li>
+                                A js <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code class="hljs language-javascript">Array</code></a> if mode is <code class="hljs language-javascript">scrapejs.TEXT</code>
+                            </li>
+                        </ol>
+                        <span class="note">Returns the data <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing#synchronous_javascript">synchronously</a> which makes the page unresponsive until loaded in the main thread - Best to use in seperate <a target="_blank" href="https://levelup.gitconnected.com/asynchronous-javascript-6d219b6eb8ff">async</a> thread</span><br>
+                        Read more about the function <a target="_blank" href="#requestDataByClassnameSync">here</a>
+                    </li>
+                    <li>
+                        <code class="hljs language-javascript">requestDataByIdSync();</code> returns -
+                        <ol>
+                            <li>
+                                A <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement"><code class="hljs language-javascript">HTML[element-type]Element</code></a> (eg: <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSpanElement"><code class="hljs language-javascript">HTMLSpanElement</code></a>) if mode is <code class="hljs language-javascript">scrapejs.HTML</code>
+                            </li>
+                            <li>
+                                A js <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code class="hljs language-javascript">String</code></a> if mode is <code class="hljs language-javascript">scrapejs.TEXT</code>
+                            </li>
+                        </ol>
+                        <span class="note">Returns the data <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing#synchronous_javascript">synchronously</a> which makes the page unresponsive until loaded in the main thread - Best to use in seperate <a target="_blank" href="https://levelup.gitconnected.com/asynchronous-javascript-6d219b6eb8ff">async</a> thread</span><br>
+                        Read more about the function <a target="_blank" href="#requestDataByIdSync">here</a>
+                    </li>
+                    <li>
+                        <code class="hljs language-javascript">getPageSync();</code> returns -
+                        <ol>
+                            <li>
+                                A <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDocument"><code class="hljs language-javascript">HTMLDocument</code></a> - The HTML code of the page requested
+                            </li>
+                        </ol>
+                        <span class="note">Returns the data <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing#synchronous_javascript">synchronously</a> which makes the page unresponsive until loaded in the main thread - Best to use in seperate <a target="_blank" href="https://levelup.gitconnected.com/asynchronous-javascript-6d219b6eb8ff">async</a> thread</span><br>
+                        Read more about the function <a target="_blank" href="#getPageSync">here</a>
+                    </li>
+                    <li>
+                        <code class="hljs language-javascript">getDataSync();</code> returns -
+                        <ol>
+                            <li>
+                                A js <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code class="hljs language-javascript">String</code></a> - The contents of the page requested - can be other than html
+                            </li>
+                        </ol>
+                        <span class="note">Returns the data <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing#synchronous_javascript">synchronously</a> which makes the page unresponsive until loaded in the main thread - Best to use in seperate <a target="_blank" href="https://levelup.gitconnected.com/asynchronous-javascript-6d219b6eb8ff">async</a> thread</span><br>
+                        Read more about the function <a target="_blank" href="#getDataSync">here</a>
+                    </li>
+                </ul>
+                Note: these functions are created as variables and can be overridden by functions in your js code.
+            </block>
+            <block id="requestDataByClassname">
+                <span class="block-title">requestDataByClassname from <b>ScrapeJs</b> library.</span>
+                <code class="hljs language-javascript">requestDataByClassname();</code> is an
+                <pre><code class="hljs language-javascript">requestDataByClassname({class : 'maincounter-number',
+                              address : 'https://www.worldometers.info/coronavirus/'},
+                            scrapejs.HTML)
+  .then(data =&gt; {
+    // The returned value is a <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection">HTMLCollection</a>.
+    console.log(data);
+    document.getElementById('output').innerHTML = data[0].outerHTML; // Prints the current covid cases
+});</code></pre>
+                <pre><code class="hljs language-javascript">requestDataByClassname({class : 'maincounter-number',
+                          address : 'https://www.worldometers.info/coronavirus/'},
+                        scrapejs.TEXT)
+  .then(data =&gt; {
+    // The returned value is a JavaScript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>.
+    console.log(data);
+    document.getElementById('output').innerHTML = data[0]; // Prints the current covid cases
+});</code></pre>
+            </block>
+            <block id="requestDataById">
+                welcome to requestDataById
+            </block>
+            <block id="getPage">
+                welcome to getPage
+            </block>
+            <block id="getData">
+                welcome to getData
+            </block>
+            <block id="requestDataByClassnameSync">
+                welcome to requestDataByClassnameSync
+            </block>
+            <block id="requestDataByIdSync">
+                welcome to requestDataByIdSync
+            </block>
+            <block id="getPageSync">
+                welcome to getPageSync
+            </block>
+            <block id="getDataSync">
+                welcome to getDataSync
+            </block>
+            <block id="constants">
+                welcome to constants
+            </block>
+            <block id="scrapejsHTML">
+                welcome to scrapejsHTML
+            </block>
+            <block id="scrapejsTEXT">
+                welcome to scrapejsTEXT
+            </block>
+            <block id="wiki">
+                <span class="block-title"></span>
+            </block>
+        </div>
+        <footer>
+            <div class="social_media">
+                <a href="https://github.com/Toprun123/scrapeJs" target="_blank">
+                    <picture class="logo">
+                        <source srcset="./images/github.png" media="(prefers-color-scheme: dark)">
+                        <img draggable="false" class="logo" src="./images/github_dark.png" alt="GITHUB">
+                    </picture>
+                </a>
+            </div>
+        </footer>
+        <script src="./scripts/wiki.js" charset="utf-8"></script>
+    </body>
+</html>
